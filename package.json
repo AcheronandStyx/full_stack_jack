@@ -1,5 +1,5 @@
 {
-  "name": "umn_bootcamp_project_two",
+  "name": "full_stack_jack",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AcheronandStyx/UMN_bootcamp_project_two.git"
+    "url": "git+https://github.com/AcheronandStyx/full_stack_jack.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AcheronandStyx/UMN_bootcamp_project_two/issues"
+    "url": "https://github.com/AcheronandStyx/full_stack_jack/issues"
   },
-  "homepage": "https://github.com/AcheronandStyx/UMN_bootcamp_project_two#readme",
+  "homepage": "https://github.com/AcheronandStyx/full_stack_jack#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
