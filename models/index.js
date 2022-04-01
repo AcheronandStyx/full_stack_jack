@@ -5,6 +5,7 @@ const User = require("./User");
 // Associations
 User.hasMany(Score, {
   foreignKey: "user_id",
+  onDelete: "CASCADE", // if user is deleted delete all associated scores
 });
 
 Score.belongsTo(User, {
