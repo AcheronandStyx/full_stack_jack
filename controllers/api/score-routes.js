@@ -13,10 +13,8 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   Score.create({
-    username: req.body.username,
     score: req.body.score,
-    date: req.body.date,
-    user_id: req.body.date, // will need to be changed to use the logged in users session to find the id
+    user_id: req.body.user_id, // will need to be changed to use the logged in users session to find the id
   })
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
