@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Score } = require("../../models");
-const { sequelize } = require("../../models/User");
+// const { sequelize } = require("../../models/User");
 
 // get all scores
 // http://localhost:3001/api/scores

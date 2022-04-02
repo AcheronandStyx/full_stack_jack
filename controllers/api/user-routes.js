@@ -49,7 +49,16 @@ router.post("/", (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbPostData) => res.json(dbPostData))
+    .then((dbPostData) => {
+      req.session.save(() => {
+        // save user_id and username of the user
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+
+        res.json(dbUserData);
+      });
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -67,7 +76,7 @@ router.post("/login", (req, res) => {
   }).then((dbUserData) => {
     if (!dbUserData) {
       // if no match found
-      res.status(400).json({ message: "No user with that username address!" });
+      res.status(400).json({ message: "No user with that username!" });
       return;
     }
 
@@ -86,6 +95,7 @@ router.post("/login", (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
+      console.log(dbUserData);
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
