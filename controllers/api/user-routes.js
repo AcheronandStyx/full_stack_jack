@@ -5,7 +5,7 @@ const { User, Score } = require("../../models");
 // http://localhost:3001/api/users
 router.get("/", (req, res) => {
   User.findAll({
-    attributes: { exclude: ["password"] },
+    // attributes: { exclude: ["password"] },
   })
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
@@ -49,7 +49,7 @@ router.post("/", (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbPostData) => {
+    .then((dbUserData) => {
       req.session.save(() => {
         // save user_id and username of the user
         req.session.user_id = dbUserData.id;

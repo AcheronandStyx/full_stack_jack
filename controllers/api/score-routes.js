@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 
 // get a single score by id
 //localhost:3001/api/scores/5
-http: router.get("/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   Score.findOne({
     where: {
       id: req.params.id,
