@@ -26,6 +26,10 @@ router.get("/:id", (req, res) => {
         model: Score, // also return any scores tied to this user
         attributes: ["id", "score", "created_at"],
       },
+      {
+        model: Comment,
+        attributes: ["comment_text", "created_at"],
+      },
     ],
   })
     .then((dbUserData) => {
@@ -155,4 +159,5 @@ router.delete("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 module.exports = router;

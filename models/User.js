@@ -40,6 +40,7 @@ User.init(
     },
   },
   {
+
     hooks: {
       // set up beforeCreate lifecycle "hook" functionality
       async beforeCreate(newUserData) {
