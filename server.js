@@ -1,7 +1,8 @@
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars");
-const hbs = exphbs.create({});
+const helpers = require("./utils/helpers"); // bring in helper functions
+const hbs = exphbs.create({ helpers });
 const session = require("express-session"); // bring session pkg
 
 const routes = require("./controllers");

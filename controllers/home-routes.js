@@ -22,10 +22,6 @@ router.get("/create-user", (req, res) => {
   res.render("create-user");
 });
 
-router.get("/highscores", (req, res) => {
-  res.render("highscores");
-});
-
 router.get("/game-content", (req, res) => {
   res.render("game_content");
 });
