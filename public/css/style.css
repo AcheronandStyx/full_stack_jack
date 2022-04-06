@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    color: white;
+    background-color: #6479E8;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+#footer {
+    margin: 30px 0;
+}
+
+
+/*Game*/
+.playing-card {
+    border: 3px solid #68F291;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    aspect-ratio: 5/7;
+    max-height: 350px;
+}
+
+#dealer-cards {
+    margin-top: 20px;
+    max-height: 400px;
+}
+
+#player-cards {
+    margin-top: 20px;
+    max-height: 400px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#game-info {
+    background-color: #8AE864;
+    border: 3px solid #68C3F2;
+    margin-top: 30px;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 1.5em;
+}

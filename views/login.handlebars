@@ -1,0 +1,72 @@
+<main class="row">
+  <div class="col-md-6">
+    <h2 class="d-flex justify-content-center">GAME RULES</h2>
+    <ul>
+      <li>
+        The goal is to beat the dealer by getting a hand value as close to 21 as
+        possible, without going over 21.
+      </li>
+      <li>
+        Face cards are worth 10 (example: queen of spades = 10). Number cards
+        are worth their number (8 of diamonds = 8). Suits do not change value.
+        Aces are worth 1 or 11, depending on what value helps your hand.
+      </li>
+      <li>
+        At the start of the game, you will place a bet and will be dealt two
+        cards. The dealer will also receive two cards.
+      </li>
+      <li>
+        If your first two cards equal 21, it is a NATURAL or “BLACKJACK”. If the
+        dealer doesn’t also have a natural, then you WIN one and half times your
+        bet. If the dealer also has a natural, you TIE and receive your bet
+        back.
+      </li>
+      <li>
+        You may decide to STAND (not ask for another card) or HIT (ask for
+        another card to increase hand value). You may STAND on the two cards
+        original cards, or ask the dealer for additional cards, one at a time,
+        until deciding to STAND on the hand value (if it is 21 or under), or
+        goes “BUST” (if it is over 21).
+      </li>
+      <li>
+        When the dealer has served you your cards, their total will be examined.
+        If the total is 17 or more, it must stand. If the total is 16 or under,
+        they must take a card. The dealer must continue to take cards until the
+        total is 17 or more, at which point the dealer must stand. If the dealer
+        has an ace, and counting it as 11 would bring the total to 17 or more
+        (but not over 21), the dealer must count the ace as 11 and stand. The
+        dealer's decisions are automatic on all plays.
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <h2 class="d-flex justify-content-center">Login to Play</h2>
+    <form class="login-form container col-6">
+      <div class="form-group">
+        <label for="username-login">Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username-login"
+          placeholder="Enter username"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password-login"
+          placeholder="Password"
+        />
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+
+</main>
+
+<script src="/javascript/login.js"></script>
