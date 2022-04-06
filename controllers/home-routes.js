@@ -12,6 +12,10 @@ router.get("/", (req, res) => {
   res.render("homepage");
 });
 
+router.get("/game-page", (req, res) => {
+  res.render("game_content");
+});
+
 router.get("/login", (req, res) => {
   console.log("triggered login");
   console.log(req.session);
