@@ -1,5 +1,6 @@
 const router = require("express").Router();
 
+const req = require("express/lib/request");
 const sequelize = require("../config/connection");
 
 /*
@@ -9,15 +10,19 @@ router.get("/game_content", (req, res) => {
 */
 
 router.get("/", (req, res) => {
-  res.render("homepage");
+  res.render("login");
 });
 
 router.get("/game-page", (req, res) => {
-  res.render("game_content");
+  res.render("game_content", {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get("/user-profile", (req, res) => {
-  res.render("user-profile");
+  res.render("user-profile", {
+    loggedIn: req.session.loggedIn
+  });
 })
 
 router.get("/login", (req, res) => {
