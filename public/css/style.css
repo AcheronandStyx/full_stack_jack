@@ -6,56 +6,44 @@
 
 body {
     font-family: 'Abel', sans-serif;
-    color: white;
-    background-color: #6479E8;
+    color: black;
 }
 
 /*navbar*/
+.navbar {
+    background-color: #6479E8;
+    color: white;
+}
+
 .navbar-brand {
     font-weight: bold;
 }
 
 
 /*Game*/
-.playing-card {
-    border: 3px solid #68F291;
-    border-radius: 15px;
+#game {
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+}
+#dealer-cards img {
     aspect-ratio: 5/7;
-    max-height: 350px;
+    height: 175px;
+    margin: 5px;
 }
 
-#dealer-cards {
-    margin-top: 20px;
-    max-height: 400px;
+#your-cards {
+    height: 180px;
+    width: 100%;
+}
+
+#your-cards img {
+    aspect-ratio: 5/7;
+    height: 175px;
+    margin: 5px;
 }
 
 #player-cards {
-    margin-top: 20px;
-    max-height: 400px;
+    height: 180px;
 }
-
-h3 {
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-#game-info {
-    background-color: #8AE864;
-    border: 3px solid #68C3F2;
-    margin-top: 30px;
-    border-radius: 15px;
-    padding: 15px;
-    font-size: 1.5em;
-}
-
 
 /*create account*/
 #create-acct {
@@ -69,8 +57,9 @@ h1 {
 /*game rules*/
 #rule-list {
     font-size: 1.5em;
+}
 
-  /* Text on highscores page*/
+/* Text on highscores page*/
 .score {
     color: black;
 
