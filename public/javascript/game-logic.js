@@ -4,8 +4,8 @@ var yourSum = 0;
 var dealerAceCount = 0;
 var yourAceCount = 0; 
 
-var hidden;
 var deck;
+var hidden;
 
 var canHit = true;
 
@@ -61,14 +61,14 @@ function startGame() {
 
     for (let i = 0; i < 1; i++) {
         let hiddenImg = document.createElement("img");
-        let card = deck.pop();
+        hidden = deck.pop();
         hiddenImg.src = "/images/cards/BACK.png";
         hiddenImg.setAttribute("id", "hidden");
-        dealerSum += getValue(card);
-        dealerAceCount += checkAce(card);
+        dealerSum += getValue(hidden);
+        dealerAceCount += checkAce(hidden);
         document.getElementById("dealer-cards").append(hiddenImg);
 
-        console.log(card);
+        console.log(hidden);
     }
 
     for (let i = 0; i < 2; i++) {
@@ -122,9 +122,6 @@ function stay() {
 
     canHit = false;
 
-
-    //cant find value of hidden
-    hidden = 
     document.getElementById("hidden").src = "/images/cards/" + hidden + ".png";
 
     while (dealerSum < 17) {

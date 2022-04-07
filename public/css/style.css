@@ -25,6 +25,10 @@ body {
     text-align: center;
 }
 
+#dealer-score {
+    padding: 10px;
+}
+
 #dealer-cards img {
     aspect-ratio: 5/7;
     height: 175px;
@@ -39,13 +43,17 @@ body {
     animation: fade-in 1s, slide-in 1s;
 }
 
+#your-score {
+    margin-top: 10px;
+}
+
 #your-cards {
-    height: 180px;
+    height: 200px;
     width: 100%;
 }
 
 #dealer-cards {
-    height: 180px;
+    height: 200px;
     width: 100%;
 }
 
@@ -76,6 +84,12 @@ body {
     to {
         transform: translateX(0);
     }
+}
+
+#results {
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 /*create account*/
