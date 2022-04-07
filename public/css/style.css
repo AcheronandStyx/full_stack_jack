@@ -69,9 +69,18 @@ h1 {
 /*game rules*/
 #rule-list {
     font-size: 1.5em;
-
+}
   /* Text on highscores page*/
-.score {
-    color: black;
 
+.score-page {
+    color: black
+}
+
+.container {
+    width: fit-content;
+}
+
+
+.list-group-item {
+    border: 0px;
 }

@@ -1,8 +1,10 @@
-<ul class="score list-group align-items-center container">
-  {{#each scores as |score|}}
-  <li class="list-group-item p-0">
-    {{> score-info score }}
-  </li>
-  {{/each}}
-</ul>
-
+<section class="score-page">
+  <h2 id="score-title" class="d-flex justify-content-center">HIGHSCORES</h2>
+  <ul class="score-list list-group align-items-stretch container">
+    {{#each scores as |score|}}
+    <li class="score-group1 list-group-item p-0">
+      {{> score-info score }}
+    </li>
+    {{/each}}
+  </ul>
+</section> 
