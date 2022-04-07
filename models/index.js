@@ -24,3 +24,6 @@ User.hasMany(Comment, {
 });
 
 module.exports = { User, Score, Comment };
+
+// add new column for the betting logic
+// add bet column with default amounts to the score table

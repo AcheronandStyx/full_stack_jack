@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Score } = require("../../models");
+const { User, Score, Comment } = require("../../models");
 
 // get all users
 // http://localhost:3001/api/users
@@ -33,6 +33,7 @@ router.get("/:id", (req, res) => {
     ],
   })
     .then((dbUserData) => {
+      console.log(dbUserData);
       if (!dbUserData) {
         res.status(404).json({ message: "No user found with this id" });
         return;
