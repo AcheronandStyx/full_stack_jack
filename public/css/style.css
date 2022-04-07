@@ -24,13 +24,27 @@ body {
 #game {
     text-align: center;
 }
+
 #dealer-cards img {
     aspect-ratio: 5/7;
     height: 175px;
     margin: 5px;
+    animation: fade-in 1s, slide-in 1s;
+}
+
+#hidden {
+    aspect-ratio: 5/7;
+    height: 175px;
+    margin: 5px;
+    animation: fade-in 1s, slide-in 1s;
 }
 
 #your-cards {
+    height: 180px;
+    width: 100%;
+}
+
+#dealer-cards {
     height: 180px;
     width: 100%;
 }
@@ -39,10 +53,29 @@ body {
     aspect-ratio: 5/7;
     height: 175px;
     margin: 5px;
+    animation: fade-in 1s, slide-in 1s;
 }
 
 #player-cards {
     height: 180px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 /*create account*/
