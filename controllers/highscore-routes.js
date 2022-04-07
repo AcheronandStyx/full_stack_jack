@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 const { Score, User } = require("../models");
 
 router.get("/", (req, res) => {
+  console.log("triggered");
   Score.findAll({
     attributes: ["id", "score", "created_at"],
     include: [
