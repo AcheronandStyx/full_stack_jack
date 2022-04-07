@@ -54,12 +54,20 @@ body {
     font-size: 1.5em;
 }
 
-/*game rules*/
-#rule-list {
+/*login*/
+#login-acct {
+    background-color: #8AE864;
+    border: 3px solid #68C3F2;
+    margin-top: 30px;
+    border-radius: 15px;
     font-size: 1.5em;
 }
 
-
+/*game rules*/
+#rule-list {
+    font-size: 1.5em;
+    margin: 30px;
+}
 
 /* Text on highscores page*/
 .score {
