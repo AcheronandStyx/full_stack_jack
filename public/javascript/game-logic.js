@@ -4,8 +4,8 @@ var yourSum = 0;
 var dealerAceCount = 0;
 var yourAceCount = 0; 
 
-var hidden;
 var deck;
+var hidden;
 
 var canHit = true;
 
@@ -25,7 +25,6 @@ function deal() {
     shuffleDeck();
     startGame();
     }
-   
 }
 
 function buildDeck() {
@@ -50,16 +49,26 @@ function shuffleDeck() {
 }
 
 function startGame() {
-    hidden = deck.pop();
-    dealerSum += getValue(hidden);
-    dealerAceCount += checkAce(hidden);
-    while (dealerSum < 17) {
+
+    for (let i = 0; i < 1; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
         cardImg.src = "/images/cards/" + card + ".png";
         dealerSum += getValue(card);
         dealerAceCount += checkAce(card);
         document.getElementById("dealer-cards").append(cardImg);
+    }
+
+    for (let i = 0; i < 1; i++) {
+        let hiddenImg = document.createElement("img");
+        hidden = deck.pop();
+        hiddenImg.src = "/images/cards/BACK.png";
+        hiddenImg.setAttribute("id", "hidden");
+        dealerSum += getValue(hidden);
+        dealerAceCount += checkAce(hidden);
+        document.getElementById("dealer-cards").append(hiddenImg);
+
+        console.log(hidden);
     }
 
     for (let i = 0; i < 2; i++) {
@@ -107,11 +116,22 @@ function hit() {
 }
 
 function stay() {
+
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
 
     canHit = false;
+
     document.getElementById("hidden").src = "/images/cards/" + hidden + ".png";
+
+    while (dealerSum < 17) {
+        let cardImg = document.createElement("img");
+        let card = deck.pop();
+        cardImg.src = "/images/cards/" + card + ".png";
+        dealerSum += getValue(card);
+        dealerAceCount += checkAce(card);
+        document.getElementById("dealer-cards").append(cardImg);
+    }
 
     let message = "";
     if (yourSum > 21) {
@@ -121,7 +141,7 @@ function stay() {
         message = "You Lose!";
     }
     else if (dealerSum > 21) {
-        message = "You win!";
+        message = "You Win!";
     }
     else if (yourSum == dealerSum) {
         message = "You Lose!";
