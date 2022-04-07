@@ -132,6 +132,8 @@ function stay() {
         message = "You Win!";
     }
 
+    
+
     document.getElementById("dealer-sum").innerText = dealerSum;
     document.getElementById("your-sum").innerText = yourSum;
     document.getElementById("results").innerText = message;
