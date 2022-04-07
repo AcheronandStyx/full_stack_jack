@@ -20,9 +20,12 @@ function newGame() {
 document.getElementById("deal").addEventListener("click", deal);
 
 function deal() {
+    if (yourSum === 0){
     buildDeck();
     shuffleDeck();
     startGame();
+    }
+   
 }
 
 function buildDeck() {
