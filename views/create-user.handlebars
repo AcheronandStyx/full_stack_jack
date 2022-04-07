@@ -1,7 +1,45 @@
 <main class="row d-flex justify-content-center">
+  <!--create acct-->
+  <div class="col-md-5 p-5" id="create-acct">
+    <h2 class="d-flex justify-content-center">Create Account to Play</h2>
+    <form class="signup-form container col-6 p-5">
+      <div class="form-group">
+        <label for="username-signup">Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username-signup"
+          placeholder="Enter username"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email-signup"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password-signup"
+          placeholder="Enter password"
+        />
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+      </div>
+    </form>
+  </div>
+  <!--create acct end-->
+  <!--game rules-->
   <div class="p-5 col-md-6">
-    <h2 class="d-flex justify-content-center">GAME RULES</h2>
-    <ul>
+    <h2 class="d-flex justify-content-center" id="game-rules">GAME RULES</h2>
+    <ul id="rule-list">
       <li>
         The goal is to beat the dealer by getting a hand value as close to 21 as
         possible, without going over 21.
@@ -37,43 +75,13 @@
         (but not over 21), the dealer must count the ace as 11 and stand. The
         dealer's decisions are automatic on all plays.
       </li>
+      <li>
+        Play 10 hands to see if you can get the high score!
+      </li>
     </ul>
   </div>
-  <div class="col-md-6 p-5">
-    <h2 class="d-flex justify-content-center">Create Account to Play</h2>
-    <form class="signup-form container col-6 p-5">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="username-signup"
-          placeholder="Enter username"
-        />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="email-signup"
-          placeholder="Enter email"
-        />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password-signup"
-          placeholder="Enter password"
-        />
-      </div>
-      <div>
-        <button type="submit" class="btn btn-primary">Create Account</button>
-      </div>
-    </form>
-  </div>
+  <!--game rules end-->
+
 </main>
 
 <script src="javascript/create-user.js"></script>
