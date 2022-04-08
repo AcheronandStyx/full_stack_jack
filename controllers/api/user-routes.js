@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Score, Comment } = require("../../models");
-const withAuth = require("../../utils/auth");
+//const withAuth = require("../../utils/auth");
 
 // get all users
 // http://localhost:3001/api/users
