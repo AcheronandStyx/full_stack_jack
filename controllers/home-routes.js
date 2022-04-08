@@ -14,17 +14,17 @@ router.get("/", (req, res) => {
   res.render("login");
 });
 
-router.get("/game-page", withAuth, (req, res) => {
+router.get("/game-page", (req, res) => {
   res.render("game_content", {
-    loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn,
   });
 });
 
-router.get("/user-profile", withAuth, (req, res) => {
+router.get("/user-profile", (req, res) => {
   res.render("user-profile", {
-    loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn,
   });
-})
+});
 
 router.get("/login", (req, res) => {
   console.log("triggered login");
