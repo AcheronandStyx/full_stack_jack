@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 
 // get user by id
 // http://localhost:3001/api/users/5
-router.get("/:id", withAuth, (req, res) => {
+router.get("/:id", (req, res) => {
   User.findOne({
     where: {
       id: req.params.id,
