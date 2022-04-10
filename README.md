@@ -10,6 +10,25 @@ https://young-atoll-21457.herokuapp.com/
 
 ![game-page](/public/images/screenshot/full-stack-jack.jpg)
 
+## Technologies
+- Heroku (deployment)
+- Node and Express (RESTful APIs)
+- MySQL and Sequelize (databases)
+- Handlebars (templating engine)
+- Dependencies:
+    - bcrypt
+    - connect-session-sequelize
+    - dotenv
+    - engine-blackjack-tsExpress
+    - express-handlebars
+    - Express-session (authentication)
+    - mySQL
+    - mySQL2
+    - Prettier
+    - Sequelize
+- MVC paradigm (folder structure)
+- CSS, Bootstrap and Javascript 
+
 ## Contributors
 - WillYazdani
 - AcheronandStyx
