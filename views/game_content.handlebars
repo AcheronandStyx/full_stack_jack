@@ -1,19 +1,23 @@
+
 <div class="container" id="game">
   <h2 id="dealer-score">Dealer: <span id="dealer-sum"></span></h2>
   <div class="text-centered" id="dealer-cards">
       <!--<img id="hidden" src="/images/cards/BACK.png">-->
   </div>
 
-  <h2 id="you-score">You: <span id="your-sum"></span></h2>
+  <h2 id="your-score">You: <span id="your-sum"></span></h2>
   <div id="your-cards"></div>
 
-  <br>
-  <button class="btn btn-success p-3 m-2" id="deal">Deal</button>
-  <button class="btn btn-warning p-3 m-2" id="hit">Hit</button>
-  <button class="btn btn-danger p-3 m-2" id="stay">Stay</button>
-  <button class="btn btn-primary p-3 m-2" id="new-game">New Game</button>
+  <div class="container" id="buttons">
+    <button class="btn btn-success p-3 m-2" id="deal">Deal</button>
+    <button class="btn btn-warning p-3 m-2" id="hit">Hit</button>
+    <button class="btn btn-danger p-3 m-2" id="stay">Stay</button>
+    <button class="btn btn-primary p-3 m-2" id="new-game">New Game</button>
+  </div>
+
   <p id="results"></p>
   
+  <div class="vignette"></div>
 </div>
 
 <script src="/javascript/game-logic.js"></script>

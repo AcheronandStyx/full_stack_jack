@@ -6,41 +6,94 @@
 
 body {
     font-family: 'Abel', sans-serif;
-    color: black;
+    color: white;
+    background: linear-gradient(-45deg, #835DE3, #5DA6E3, #D067FB);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /*navbar*/
-.navbar {
-    background-color: #6479E8;
-    color: white;
+#nav {
+    background-color: white;
+    color: black;
 }
 
 .navbar-brand {
     font-weight: bold;
+    color: black;
+}
+
+#nav-item {
+    color: black;
+}
+
+#nav-item:hover {
+    color: #FA2719;
 }
 
 
 /*Game*/
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    z-index: -1;
+}
+
 #game {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #dealer-score {
-    padding: 10px;
+    margin-top: 20px;
+}
+
+#dealer-cards {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    height: clamp(200px, 200px, 200px);
+    width: clamp(300px, 100%, 100%);
+    background-color:rgb(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    filter: drop-shadow(0 0 10px black);
+    border: 3px solid white;
 }
 
 #dealer-cards img {
-    aspect-ratio: 5/7;
-    height: 175px;
+    height: 100%;
     margin: 5px;
     animation: fade-in 1s, slide-in 1s;
+    aspect-ratio: 5/7;
 }
 
 #hidden {
-    aspect-ratio: 5/7;
-    height: 175px;
+    height: 100%;
     margin: 5px;
     animation: fade-in 1s, slide-in 1s;
+    aspect-ratio: 5/7;
 }
 
 #your-score {
@@ -48,20 +101,25 @@ body {
 }
 
 #your-cards {
-    height: 200px;
-    width: 100%;
-}
-
-#dealer-cards {
-    height: 200px;
-    width: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    height: clamp(200px, 200px, 200px);
+    width: clamp(300px, 100%, 100%);
+    background-color:rgb(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    filter: drop-shadow(0 0 10px black);
+    border: 3px solid white;
 }
 
 #your-cards img {
-    aspect-ratio: 5/7;
-    height: 175px;
+    height: 100%;
+    width: auto;
     margin: 5px;
     animation: fade-in 1s, slide-in 1s;
+    aspect-ratio: 5/7;
 }
 
 #player-cards {
@@ -86,6 +144,20 @@ body {
     }
 }
 
+#buttons {
+    margin-top: 20px;
+    background-color:rgb(255, 255, 255, 0.3);
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px black);
+
+}
+
 #results {
     margin-top: 20px;
     font-size: 2.5em;
@@ -94,20 +166,24 @@ body {
 
 /*create account*/
 #create-acct {
-    background-color: #8AE864;
-    border: 3px solid #68C3F2;
+    background-color:rgb(255, 255, 255, 0.3);
+    filter: drop-shadow(0 0 10px black);
+    border: 3px solid #FDF7E3;
     margin-top: 30px;
     border-radius: 15px;
     font-size: 1.5em;
+    height:550px;
 }
 
 /*login*/
 #login-acct {
-    background-color: #8AE864;
-    border: 3px solid #68C3F2;
+    background-color:rgb(255, 255, 255, 0.3);
+    filter: drop-shadow(0 0 10px black);
+    border: 3px solid white;
     margin-top: 30px;
     border-radius: 15px;
     font-size: 1.5em;
+    height:500px;
 }
 
 /*game rules*/
@@ -120,4 +196,23 @@ body {
 .score {
     color: black;
 
+}
+
+
+@media only screen and (max-width: 900px) {
+    #your-cards, #dealer-cards {
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 899px) {
+    #your-cards, #dealer-cards {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #your-cards img, #dealer-cards img {
+        height: 60%;
+    }
 }
