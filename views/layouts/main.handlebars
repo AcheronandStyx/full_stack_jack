@@ -40,30 +40,31 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
 
-              <a class="nav-link text-light" href="/game-page">Play Game</a>
+              <a class="nav-link" href="/game-page" id="nav-item">Play Game</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="/user-profile">Your Profile</a>
+            <a class="nav-link" href="/user-profile" id="nav-item">Your Profile</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link text-light" href="/highscores">High Scores</a>
+              <a class="nav-link" href="/highscores" id="nav-item">High Scores</a>
           </li>
           {{#if loggedIn}}
             <li class="nav-item">
-              <a id="logout" class="nav-link text-light">Log Out</a>
+              <a id="logout" class="nav-link" id="nav-item">Log Out</a>
             </li>
           {{else}}
             <li class="nav-item">
-              <a class="nav-link text-light" href="/login">Log In</a>
+              <a class="nav-link" href="/login" id="nav-item">Log In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="/create-user">Create Account</a>
+              <a class="nav-link" href="/create-user" id="nav-item">Create Account</a>
             </li>
           {{/if}}
         </ul>
       </div>
     </nav>
     <main>
+      <div class="vignette"></div>
       {{{body}}}
     </main>
 
@@ -72,7 +73,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
-
     {{/if}}
   </body>
 
