@@ -31,7 +31,6 @@ router.get("/user-profile", withAuth, (req, res) => {
 
 // create-user.handlebars
 router.get("/create-user", (req, res) => {
-  console.log("triggered signup form");
   res.render("create-user");
 });
 

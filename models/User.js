@@ -38,16 +38,6 @@ User.init(
         len: [8], // minimum password length
       },
     },
-    wins: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0, // Default to 0 until user has played
-    },
-    losses: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0, // Default to 0 until user has played
-    },
   },
   {
     hooks: {
@@ -76,22 +66,15 @@ User.init(
 module.exports = User;
 
 /*
-,
-  {
-    hooks: {
-      // set up beforeCreate lifecycle "hook" functionality
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
 
-      async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      },
+    wins: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0, // Default to 0 until user has played
     },
-  },
+    losses: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0, // Default to 0 until user has played
+    },
 */
