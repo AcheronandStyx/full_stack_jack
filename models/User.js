@@ -38,6 +38,16 @@ User.init(
         len: [8], // minimum password length
       },
     },
+    wins: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0, // Default to 0 until user has played
+    },
+    losses: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0, // Default to 0 until user has played
+    },
   },
   {
     hooks: {

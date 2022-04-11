@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 const { Score, User } = require("../models");
 const withAuth = require("../utils/auth");
 
-// Render High Scores
+// Render Leader Board
 router.get("/", withAuth, (req, res) => {
   console.log("triggered");
   Score.findAll({
