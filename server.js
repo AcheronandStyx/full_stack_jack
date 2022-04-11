@@ -3,7 +3,7 @@ const path = require("path");
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers"); // bring in helper functions
 const hbs = exphbs.create({ helpers });
-const session = require("express-session"); // bring session pkg
+const session = require("express-session"); // bring in express-session
 
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sess = {
-  secret: "Super secret secret",
+  secret: "Secret",
   cookie: {}, // tells session to use cookies
   resave: false,
   saveUninitialized: true,

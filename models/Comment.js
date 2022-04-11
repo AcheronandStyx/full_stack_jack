@@ -2,8 +2,8 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Comment extends Model {}
+// Unused Model at this time.
 
-// add post_id column with we include multiple places to comment
 Comment.init(
   {
     id: {

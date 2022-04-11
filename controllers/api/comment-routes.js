@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { Comment } = require("../../models");
 
+// Unused Model at this time.
+
 router.get("/", (req, res) => {
   Comment.findAll()
     .then((dbCommentData) => res.json(dbCommentData))

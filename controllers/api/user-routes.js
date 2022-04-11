@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Score, Comment } = require("../../models");
-//const withAuth = require("../../utils/auth");
+const withAuth = require("../../utils/auth");
 
 // get all users
 // http://localhost:3001/api/users
@@ -71,7 +71,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// login
+// backend login handler
 router.post("/login", (req, res) => {
   // expects {username: "test1", password: "password1234"}
   User.findOne({
@@ -95,7 +95,6 @@ router.post("/login", (req, res) => {
       return;
     }
 
-    // need to implement sessions in server.js and test
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
@@ -118,9 +117,8 @@ router.post("/logout", (req, res) => {
   }
 });
 
-// update user.  Could change their email or password
-// http://localhost:3001/api/users/5
-router.put("/:id", (req, res) => {
+// Update user profile
+router.put("/:id", withAuth, (req, res) => {
   User.update(req.body, {
     // use req.body to only update the parts that are passed in
     individualHooks: true,
@@ -143,7 +141,7 @@ router.put("/:id", (req, res) => {
 
 // delete user
 // http://localhost:3001/api/users/1
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
